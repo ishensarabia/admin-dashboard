@@ -1,76 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="dashboard">
-        <!-- Sidebar -->
-        <nav class="sidebar">
-            <h1 href="#"><i class="fa fa-gears"></i> Dashboard</h1>
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
-                <li><a href="#"><i class="fas fa-history"></i> History</a></li>
-                <li><a href="#"><i class="fas fa-tasks"></i> Tasks</a></li>
-                <li><a href="#"><i class="fas fa-users"></i> Communities</a></li>
-                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
-                <li><a href="#"><i class="fas fa-question-circle"></i> Support</a></li>
-                <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy</a></li>
-            </ul>
-        </nav>
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <h1 href="#"><i class="fa fa-gears"></i> Dashboard</h1>
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-history"></i> History</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-tasks"></i> Tasks</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> Communities</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-question-circle"></i> Support</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-shield-alt"></i> Privacy</a>
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <header>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="user-info">
-                    <span>Hi there,</span>
-                    <div class="user-name">Morgan Oakley (@morgan)</div>
-                    <img src="https://via.placeholder.com/40" alt="User Profile Picture">
-                </div>
-            </header>
+      <!-- Main Content -->
+      <div class="main-content">
+        <header>
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="user-info">
+            <div class="notifications">
+              <i class="fas fa-bell"></i>
+              <span class="badge">{#notifications}</span>
+            <img
+              src="https://via.placeholder.com/40"
+              alt="User Profile Picture"
+            />
+            <div class="name">{Name}</div>
+          </div>
+        </header>
 
-            <!-- Dashboard Cards -->
-            <section class="dashboard-cards">
-                <h3>Your Projects</h3>
-                <div class="projects">
-                    <div class="card">Super Cool Project</div>
-                    <div class="card">Less Cool Project</div>
-                    <div class="card">Impossible App</div>
-                    <div class="card">Easy Peasy App</div>
-                    <div class="card">Ad Blocker</div>
-                    <div class="card">Money Maker</div>
-                </div>
-            </section>
-        </div>
+        <section class="user-greeting">
+          <div class = "user-info">
+            <img
+              src="https://via.placeholder.com/40"
+              alt="User Profile Picture"
+            />
+            <div class="greeting-text">
+              <span>Hi there,</span>
+              <span class="name">{name} {@username}</span> 
+            </div>
+          </div>
+          <section class="user-buttons">
+            <button class="new">New</button>
+            <button class="upload">Upload</button>
+            <button class="share">Share</button>
+          </section>
+        </section>
 
-        <!-- Right Sidebar -->
-        <aside class="right-sidebar">
+        <!-- Dashboard Cards -->
+         <div class="content-grid">
+
+        <section class="dashboard-cards">
+          <h3>Your Projects</h3>
+          <div class="projects">
+            <div class="card">Super Cool Project
+              <div class="description">This project is super cool and will change the world.</div>
+              <div class="buttons">
+                <button class="fa fa-star"></button>
+                <button class="fa fa-eye"></button>
+                <button class="fa fa-share"></button>
+              </div>
+            </div>
+
+            <div class="card">Less Cool Project
+              <div class="description">This project is less cool but still pretty cool.</div>
+              <div class="buttons">
+                <button class="fa fa-star"></button>
+                <button class="fa fa-eye"></button>
+                <button class="fa fa-share"></button>
+              </div>
+            </div>
+
+            <div class="card">Impossible App
+              <div class="description">This app is impossible to build but we're trying anyway.</div>
+              <div class="buttons">
+                <button class="fa fa-star"></button>
+                <button class="fa fa-eye"></button>
+                <button class="fa fa-share"></button>
+              </div>
+            </div>
+
+            <div class="card">Easy Peasy App
+              <div class="description">This app is super easy to build and will make us millions.</div>
+              <div class="buttons">
+                <button class="fa fa-star"></button>
+                <button class="fa fa-eye"></button>
+                <button class="fa fa-share"></button>
+              </div>
+            </div>
+
+            <div class="card">Ad Blocker
+              <div class="description">This app will block all ads and make the internet a better place.</div>
+              <div class="buttons">
+                <button class="fa fa-star"></button>
+                <button class="fa fa-eye"></button>
+                <button class="fa fa-share"></button>
+              </div>
+            </div>
+
+            <div class="card">Money Maker
+              <div class="description">This app will make us all rich and famous.</div>
+              <div class="buttons">
+                <button class="fa fa-star"></button>
+                <button class="fa fa-eye"></button>
+                <button class="fa fa-share"></button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+ 
+        <!-- Announcements -->
+        <aside class="right-side">
+          <div class = "announcements">
             <h3>Announcements</h3>
             <ul>
-                <li>Site Maintenance</li>
-                <li>Community Share Day</li>
-                <li>Updated Privacy Policy</li>
+              <li class="announcement">
+              <h4>Community Share Day</h4>
+              <p>Join us for Community Share Day on Friday, August 20th. Share your projects and get feedback from the community.</p>
+              </li>
+              <li class="announcement">
+              <h4>Community Share Day</h4>
+              <p>Join us for Community Share Day on Friday, August 20th. Share your projects and get feedback from the community.</p>
+              </li>
+              <li class="announcement">
+              <h4>Community Share Day</h4>
+              <p>Join us for Community Share Day on Friday, August 20th. Share your projects and get feedback from the community.</p>
+              </li>
             </ul>
+          </div>
 
+          <div class="trending">
             <h3>Trending</h3>
-            <ul class="trending">
-                <li>@tegan - World Peace Builder</li>
-                <li>@morgan - Super Cool Project</li>
-                <li>@kendall - Life Changing App</li>
-                <li>@alex - No Traffic Maker</li>
+            <ul>
+              <li class="trend">
+                <img src="https://via.placeholder.com/40" alt="User Profile Picture" />
+                <div class="trend-info">
+                  <h4>@tegan</h4>
+                  <p>Impossible App</p>
+                </div>
+              </li>
+              <li class="trend">
+                <img src="https://via.placeholder.com/40" alt="User Profile Picture" />
+                <div class="trend-info
+                ">
+                  <h4>@tegan</h4>
+                  <p>Impossible App</p>
+                </div>
+              </li>
+              <li class="trend">
+                <img src="https://via.placeholder.com/40" alt="User Profile Picture" />
+                <div class="trend-info
+                ">
+                  <h4>@tegan</h4>
+                  <p>Impossible App</p>
+                </div>
+              </li>
+              <li class="trend">
+                <img src="https://via.placeholder.com/40" alt="User Profile Picture" />
+                <div class="trend-info
+                ">
+                  <h4>@tegan</h4>
+                  <p>Impossible App</p>
+                </div>
             </ul>
-        </aside>
+          </div>
+      </aside>
+      </div>
     </div>
-</body>
+  </body>
 </html>
